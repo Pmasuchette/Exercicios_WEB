@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex_3</title>
+</head>
+
+<p id="contador">100</p>
+<button onclick="aumentarContador()">Aumentar (+10)</button>
+<button onclick="diminuirContador()">Diminuir (-10)</button>
+
+<script>
+    let valorContador = 100;
+
+    function atualizarContador() {
+        document.getElementById('contador').textContent = valorContador;
+    }
+
+    function aumentarContador() {
+        valorContador += 10;
+        atualizarContador();
+    }
+
+    function diminuirContador() {
+        valorContador -= 10;
+        atualizarContador();
+    }
+</script>
+</html>
