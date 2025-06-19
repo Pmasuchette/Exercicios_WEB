@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex_1</title>
+</head>
+
+<input type="number" id="num1">
+<button onclick="checarDivisibilidadePor3()">Verificar</button>
+<p id="resultado1"></p>
+
+<script>
+    function checarDivisibilidadePor3() {
+        let numero = parseInt(document.getElementById('num1').value);
+        let paragrafoResultado = document.getElementById('resultado1');
+
+        if (numero % 3 === 0) {
+            paragrafoResultado.textContent = 'Divisível por 3';
+        } else {
+            paragrafoResultado.textContent = 'Não divisível por 3';
+        }
+    }
+</script>
+</html>
