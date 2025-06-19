@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex_2</title>
+</head>
+
+<input type="number" id="num">
+<button onclick="mostrarMultiplicacaoComIfs()">Gerar Multiplicação</button>
+<p id="resultado"></p>
+
+<script>
+    function mostrarMultiplicacaoComIfs() {
+        let numero = parseInt(document.getElementById('num').value);
+        let paragrafoResultado = document.getElementById('resultado');
+        let saida = '';
+
+        saida += `${numero} x ${1} = ${numero}<br>`;
+
+        saida += `${numero} x ${2} = ${numero * 2}<br>`;
+
+        saida += `${numero} x ${3} = ${numero * 3}<br>`;
+
+        saida += `${numero} x ${4} = ${numero * 4}<br>`;
+ 
+        saida += `${numero} x ${5} = ${numero * 5}<br>`;
+        
+        paragrafoResultado.innerHTML = saida;
+    }
+</script>
+</html>
