@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex_4</title>
+</head>
+
+<input type="number" id="inputPalpite">
+<button onclick="verificarPalpite()">Adivinhar</button>
+<p id="resultadoPalpite"></p>
+
+<script>
+    const numeroSecreto = Math.floor(Math.random() * 20) + 1;
+
+    function verificarPalpite() {
+        let palpite = parseInt(document.getElementById('inputPalpite').value);
+        let paragrafoResultado = document.getElementById('resultadoPalpite');
+
+        if (palpite === numeroSecreto) {
+            paragrafoResultado.textContent = 'Parabéns! Você acertou!';
+        } else if (palpite < numeroSecreto) {
+            paragrafoResultado.textContent = 'É maior.';
+        } else {
+            paragrafoResultado.textContent = 'É menor.';
+        }
+    }
+</script>
+</html>
