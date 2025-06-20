@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex13</title>
+</head>
+<body>
+    <label for="idadeHumana">Anos de vida do cachorro:</label>
+    <input type="number" id="idadeHumana">
+    <button onclick="calcularIdadeCachorro()">Calcular Idade Canina</button>
+    <p id="idadeCaninaResultado"></p>
+
+    <script>
+        function calcularIdadeCachorro() {
+            let idadeHumana = parseInt(document.getElementById('idadeHumana').value);
+            let idadeCachorro = idadeHumana * 7;
+            document.getElementById('idadeCaninaResultado').textContent = `Aproximadamente ${idadeCachorro} anos caninos.`;
+        }
+    </script>
+</body>
+</html>
