@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex12</title>
+</head>
+<body>
+    <h1 id="t">Posso estar em qualquer cor!</h1>
+    <button onclick="mudarcor()">Mudar Cor</button>
+
+    <script>
+        function mudarcor() {
+            let r = Math.floor(Math.random() * 256); // Valor para o componente vermelho (0-255)
+            let g = Math.floor(Math.random() * 256); // Valor para o componente verde (0-255)
+            let b = Math.floor(Math.random() * 256); // Valor para o componente azul (0-255)
+            
+            document.getElementById('t').style.color = `rgb(${r}, ${g}, ${b})`;
+        }
+    </script>
+</body>
+</html>
