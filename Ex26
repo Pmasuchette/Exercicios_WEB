@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex26</title>
+</head>
+<body>
+    <img id="Imagem" 
+         src="https://th.bing.com/th/id/OIP.OiWLVAweyawlVD7-gyT_5QHaEw?rs=1&pid=ImgDetMain&cb=idpwebp2&o=7&rm=3" 
+         onmouseover="trocarImagem()" 
+         onmouseout="voltarImagemOriginal()">
+
+    <script>
+        const imagemOriginalSrc = "https://th.bing.com/th/id/OIP.OiWLVAweyawlVD7-gyT_5QHaEw?rs=1&pid=ImgDetMain&cb=idpwebp2&o=7&rm=3";
+        const imagemNovaSrc = "https://th.bing.com/th/id/OIP.-LfoomBRwiE4ucNzaiga6gHaFj?rs=1&pid=ImgDetMain&cb=idpwebp2&o=7&rm=3";
+
+        function trocarImagem() {
+            document.getElementById('Imagem').src = imagemNovaSrc;
+        }
+
+        function voltarImagemOriginal() {
+            document.getElementById('Imagem').src = imagemOriginalSrc;
+        }
+    </script>
+</body>
+</html>
