@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex21</title>
+</head>
+<body>
+    <h1 id="tempo">60</h1>
+    <button onclick="iniciarTemporizador()">Iniciar</button>
+    <button onclick="pausarTemporizador()">Pausar</button>
+    <button onclick="zerarTemporizador()">Zerar</button>
+
+    <script>
+        let segundos = 60;
+        let intervalo;
+
+        function atualizarTempo() {
+            document.getElementById('tempo').textContent = segundos;
+            if (segundos <= 0) {
+                pausarTemporizador();
+                document.getElementById('tempo').textContent = 'Tempo Esgotado!';
+            }
+        }
+
+        function iniciarTemporizador() {
+            if (!intervalo) {
+                intervalo = setInterval(() => {
+                    segundos--;
+                    atualizarTempo();
+                }, 1000);
+            }
+        }
+
+        function pausarTemporizador() {
+            clearInterval(intervalo);
+            intervalo = null;
+        }
+
+        function zerarTemporizador() {
+            pausarTemporizador();
+            segundos = 60;
+            atualizarTempo();
+        }
+
+        document.addEventListener('DOMContentLoaded', atualizarTempo);
+    </script>
+</body>
+</html>
