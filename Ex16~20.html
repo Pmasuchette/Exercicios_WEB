@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex16~20</title>
+</head>
+<body>
+    <label for="valorTemp">Digite a temperatura:</label>
+    <input type="number" id="valorTemp" placeholder="Valor">
+    
+    <button onclick="converterC()">Converter para Celsius</button>
+    <button onclick="converterF()">Converter para Fahrenheit</button>
+    
+    <div id="resultadoTemp"></div>
+
+    <script>
+        function converterC() {
+            let valor = parseFloat(document.getElementById('valorTemp').value);
+            let resultadoDiv = document.getElementById('resultadoTemp');
+
+            if (isNaN(valor)) {
+                resultadoDiv.textContent = 'Digite um número válido.';
+                return;
+            }
+            let celsius = (valor - 32) * 5 / 9;
+            resultadoDiv.textContent = `${valor}°F são ${celsius.toFixed(2)}°C`;
+        }
+
+        function converterF() {
+            let valor = parseFloat(document.getElementById('valorTemp').value);
+            let resultadoDiv = document.getElementById('resultadoTemp');
+
+            if (isNaN(valor)) {
+                resultadoDiv.textContent = 'Digite um número válido.';
+                return;
+            }
+            let fahrenheit = (valor * 9 / 5) + 32;
+            resultadoDiv.textContent = `${valor}°C são ${fahrenheit.toFixed(2)}°F`;
+        }
+    </script>
+</body>
+</html>
