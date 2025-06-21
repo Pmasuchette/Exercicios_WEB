@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex27</title>
+</head>
+<body>
+    <label for="campoTexto">Digite algo no campo abaixo:</label>
+    <input type="text" id="campoTexto" placeholder="Comece a digitar...">
+    <p id="mensagemTecla">Você pressionou: </p>
+
+    <script>
+        document.getElementById('campoTexto').addEventListener('keydown', function(event) {
+            document.getElementById('mensagemTecla').textContent = `Você pressionou: ${event.key}`;
+        });
+    </script>
+</body>
+</html>
