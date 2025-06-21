@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex29</title>
+</head>
+<body>
+    <h2>Aceite os Termos</h2>
+    
+    <input type="checkbox" id="aceitarTermos" onchange="alternarBotaoEnvio()">
+    <label for="aceitarTermos">Li e concordo com os termos.</label>
+    
+    <button id="btnEnviar" style="display: none;">Enviar Formulário</button>
+
+    <script>
+        function alternarBotaoEnvio() {
+            let checkbox = document.getElementById('aceitarTermos');
+            let botaoEnviar = document.getElementById('btnEnviar');
+
+            if (checkbox.checked) {
+                botaoEnviar.style.display = 'block';
+            } else {
+                botaoEnviar.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
