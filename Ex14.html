@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex14</title>
+</head>
+<body>
+    <input type="number" id="numA" placeholder="Número A">
+    <input type="number" id="numB" placeholder="Número B">
+    
+    <select id="operacao">
+        <option value="soma">+</option>
+        <option value="subtracao">-</option>
+        <option value="multiplicacao">*</option>
+        <option value="divisao">/</option>
+        <option value="potencia">A^B</option>
+        <option value="raiz">√A</option>
+    </select>
+    
+    <button onclick="calcular()">Calcular</button>
+    <p id="resultado"></p>
+    
+    <script>
+        function calcular() {
+            let numA = parseFloat(document.getElementById('numA').value);
+            let numB = parseFloat(document.getElementById('numB').value);
+            let operacao = document.getElementById('operacao').value;
+            let resultado;
+    
+        if (operacao === 'soma') {
+            resultado = numA + numB;
+        } else if (operacao === 'subtracao') {
+            resultado = numA - numB;
+        } else if (operacao === 'multiplicacao') {
+            resultado = numA * numB;
+        } else if (operacao === 'divisao') {
+            resultado = numA / numB;
+        } else if (operacao === 'potencia') {
+            resultado = Math.pow(numA, numB);
+        } else if (operacao === 'raiz'){
+            resultado = Math.sqrt(numA);}
+        document.getElementById('resultado').textContent = 'Resultado: ' + resultado;
+        }
+    </script>
+</body>
+</html>
