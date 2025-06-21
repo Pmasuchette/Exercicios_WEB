@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex20</title>
+</head>
+<body>
+    <label for="primeiroNome">Digite seu primeiro nome:</label>
+    <input type="text" id="primeiroNome" placeholder="Seu nome">
+    
+    <button onclick="saudacao()">Saudar</button>
+    
+    <p id="mensagemBoasVindas"></p>
+
+    <script>
+        function saudacao() {
+            let nome = document.getElementById('primeiroNome').value.trim();
+            let mensagemDiv = document.getElementById('mensagemBoasVindas');
+
+            if (nome === '') {
+                mensagemDiv.textContent = 'Digite seu nome.';
+            } else {
+                mensagemDiv.textContent = `Olá, ${nome}! Estamos felizes em te ver!`;
+            }
+        }
+    </script>
+</body>
+</html>
