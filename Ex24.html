@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex24</title>
+</head>
+<body>
+    <button id="meuBotao" onclick="alterarBotao()">Clique aqui!</button>
+
+    <script>
+        function alterarBotao() {
+            let botao = document.getElementById('meuBotao');
+
+            if (botao.textContent === 'Clique aqui!') {
+                botao.textContent = 'Clicado!';
+                document.body.style.backgroundColor = 'green';
+            } 
+        }
+    </script>
+</body>
+</html>
