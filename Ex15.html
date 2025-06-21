@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex15</title>
+</head>
+<body>
+    <h2>Quanto é 100-8*10</h2>
+    
+    <input type="radio" id="opcaoA" name="resposta" value="a">
+    <label for="opcaoA">920</label><br>
+    
+    <input type="radio" id="opcaoB" name="resposta" value="b">
+    <label for="opcaoB">80</label><br>
+    
+    <input type="radio" id="opcaoC" name="resposta" value="c">
+    <label for="opcaoC">20</label><br><br>
+    
+    <button onclick="verificarResposta()">Verificar</button>
+    
+    <p id="feedback"></p>
+
+    <script>
+        function verificarResposta() {
+            let feedbackElement = document.getElementById('feedback');
+            let respostaSelecionada = document.querySelector('input[name="resposta"]:checked');
+
+            if (respostaSelecionada) {
+                if (respostaSelecionada.value === 'c') {
+                    feedbackElement.textContent = 'Correto!';
+                } else {
+                    feedbackElement.textContent = 'Errado.';
+                }
+            } else {
+                feedbackElement.textContent = 'Selecione uma opção.';
+            }
+        }
+    </script>
+</body>
+</html>
