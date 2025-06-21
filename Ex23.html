@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex23</title>
+</head>
+<body>
+    <h1>Quiz de Verdadeiro ou Falso</h1>
+
+    <h3>1. Existem 118 elementos na tabela periódica.</h3>
+    <input type="radio" name="questao1" value="verdadeiro">
+    <label for="q1_v">Verdadeiro</label><br>
+    <input type="radio" name="questao1" value="falso">
+    <label for="q1_f">Falso</label><br>
+
+    <h3>2. Newton descobriu as leis da termodinâmica.</h3>
+    <input type="radio" name="questao2" value="verdadeiro">
+    <label for="q2_v">Verdadeiro</label><br>
+    <input type="radio" name="questao2" value="falso">
+    <label for="q2_f">Falso</label><br><br>
+
+    <button onclick="enviarRespostas()">Verificar Pontuação</button>
+
+    <p id="pontuacao"></p>
+
+    <script>
+        function enviarRespostas() {
+            let pontuacao = 0;
+            let feedbackPontuacao = document.getElementById('pontuacao');
+
+            let q1Resposta = document.querySelector('input[name="questao1"]:checked');
+            if (q1Resposta && q1Resposta.value === 'verdadeiro') {
+                pontuacao++;
+            }
+
+            let q2Resposta = document.querySelector('input[name="questao2"]:checked');
+            if (q2Resposta && q2Resposta.value === 'falso') {
+                pontuacao++;
+            }
+
+            feedbackPontuacao.textContent = `Sua pontuação: ${pontuacao} de 2.`;
+        }
+    </script>
+</body>
+</html>
